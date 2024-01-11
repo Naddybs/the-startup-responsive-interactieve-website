@@ -1,0 +1,192 @@
+:root {
+    --background-gray: #f6f6f4;
+    --primary-gray20: #eaeae6;
+    --primary-gray50: #c6c5bd;
+    --primary-gray70: #9b9a92;
+    --primary-gray99: #3c3b34;
+    --accent-red: #ff6b6b;
+    }
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: black;
+}
+
+h2 {
+    color: black;
+}
+
+p {
+    line-height: 1.6;
+    color: white;
+}
+/* header nav */
+nav {
+    background-color: white;
+    display: flex;
+    padding: 1em;
+    gap: 3em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+}
+nav img{
+    width: 4em;
+}
+
+/* header nav end */
+
+/* intro section */
+
+.intro{
+    padding: 2em;
+    margin: 0;
+    background-color: var(--primary-gray20);
+    max-height: fit-content;
+    position: relative;
+}
+
+.intro.content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+h1{
+    font-size: 3em;
+}
+.intro button {
+    background-color: var(--accent-red);
+    color: #fff;
+    padding: 20px 60px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    left: 2em;
+    font-size: 16px;
+   
+}
+
+.intro p {
+    font-size: 25px;
+    padding-left: 5em;
+    color: #9b9a92;
+}
+/* .svg-background{
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+}
+.svg-top-right{
+    position: absolute;
+    bottom: 22em;
+    left: 13em;
+    z-index: 1;
+}
+.svg-bottom-left{
+    position: absolute;
+    top: 7em;
+    right: 12em;
+    z-index: 1;
+} */
+
+/* intro section end */
+
+/* ai design sprint section */
+
+.ai-design-sprint{
+    background-color: var(--primary-gray99);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+}
+
+.ai-design-sprint h2{
+  margin-top: 0;
+  padding: 1em;
+  color: var(--accent-red);
+}
+
+.ai-design-sprint p{
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.ai-design-sprint button{
+    background-color: var(--accent-red);
+    color: #fff;
+    padding: 10px 60px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+   
+}
+
+.design-sprint-card{
+    background-color: var(--background-gray);
+    border-style: solid;
+    border-radius: 1em;
+    box-shadow: inset 10px 1em var(--accent-red);
+    margin: 1em;
+    padding: 1em;
+    width: 350px;
+    color: black;
+}
+.design-sprint-card p{
+    color: black;
+}
+
+/* design sprint section end */
+
+/* steps section */
+.design-sprint-steps{
+    background-color: var(--primary-gray20);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+}
+
+.design-sprint-steps p{
+    font-size: 18px;
+    margin-top: 0;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+} 
+
+
