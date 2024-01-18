@@ -23,6 +23,7 @@ p {
     line-height: 1.6;
     color: white;
 }
+
 /* header nav */
 nav {
     background-color: white;
@@ -71,7 +72,7 @@ h1{
     border: none;
     cursor: pointer;
     position: relative;
-    left: 2em;
+    left: 0;
     font-size: 16px;
    
 }
@@ -164,6 +165,123 @@ h1{
     margin-top: 0;
     color: #333;
 }
+/* steps section end */
+
+/* Studycases section */
+/* .cases{
+    background-color: var(--accent-red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+}
+.cases img{
+    width: 200px;
+}
+.card-info, .card2-info{
+    background-color: var(--background-gray);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+   */
+
+   .cases {
+    background-color: var(--accent-red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    overflow: hidden;
+    border-radius:  10em 10em 10px 10px; /* Pas aan naar jouw gewenste afgeronde hoeken */
+    border-style: solid;
+    border-color: rgba(33, 40, 41, 0.319);
+    border-width: 1em;
+  }
+  
+  .card img {
+    width: 350px;
+  }
+
+  .card-img2{
+    height:400px;
+    border-radius: 1em;
+
+  }
+  
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-gray);
+    /* clip-path: circle(110% at 50% 167%);  */
+    box-shadow: inset 5px .5em rgba(225, 9, 9, 0.962);
+  }
+
+  .card-content {
+    padding: 20px; /* Pas aan naar jouw gewenste opvulling */
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .card-link {
+    color: #fff; /* Aanpassen naar jouw gewenste linkkleur */
+    text-decoration: underline;
+  }
+ 
+/* Studycases end section */
+
+/* contact */
+.contact{
+    background-color: var(--primary-gray99);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+
+}
+.contact img{
+    width: 300px;
+    
+}
+
+.contact h2, h3{
+    color: white;
+}
+.planner{
+    background-color: var(--primary-gray50);
+
+}
+
+/*  */
 
 
 
