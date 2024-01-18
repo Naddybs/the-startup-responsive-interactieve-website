@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Aktiv Grotesk";
+    src: url("../assets/Font/AktivGrotesk_Rg.ttf");
+}
+
 :root {
     --background-gray: #f6f6f4;
     --primary-gray20: #eaeae6;
@@ -8,7 +13,7 @@
     }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Aktiv Grotesk', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
@@ -168,30 +173,6 @@ h1{
 /* steps section end */
 
 /* Studycases section */
-/* .cases{
-    background-color: var(--accent-red);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3em;
-}
-.cases img{
-    width: 200px;
-}
-.card-info, .card2-info{
-    background-color: var(--background-gray);
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 4rem 5vw;
-    padding: 0;
-    list-style-type: none;
-  }
-   */
-
    .cases {
     background-color: var(--accent-red);
     display: flex;
@@ -202,31 +183,32 @@ h1{
   
   .cards {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin: 4rem 5vw;
     padding: 0;
     list-style-type: none;
+
   }
   
   .card {
     position: relative;
     overflow: hidden;
-    border-radius:  10em 10em 10px 10px; /* Pas aan naar jouw gewenste afgeronde hoeken */
+    border-radius: 10em 10em 10px 10px ;
     border-style: solid;
     border-color: rgba(33, 40, 41, 0.319);
     border-width: 1em;
-  }
-  
-  .card img {
-    width: 350px;
-  }
+    height: 30rem;
+}
 
-  .card-img2{
-    height:400px;
-    border-radius: 1em;
+.card img {
+    width: 20em;
+    height: 20rem;
+    aspect-ratio: 1/1;
+    display: block;
+    object-fit: cover;
+ }
 
-  }
-  
   .card-overlay {
     position: absolute;
     bottom: 0;
@@ -234,7 +216,7 @@ h1{
     right: 0;
     background-color: var(--background-gray);
     /* clip-path: circle(110% at 50% 167%);  */
-    box-shadow: inset 5px .5em rgba(225, 9, 9, 0.962);
+    box-shadow: inset 5px .5em #4605056f;
   }
 
   .card-content {
@@ -269,20 +251,49 @@ h1{
 
 }
 .contact img{
-    width: 300px;
-    
+    width: 300px; 
 }
 
 .contact h2, h3{
     color: white;
 }
-.planner{
-    background-color: var(--primary-gray50);
 
+
+
+/* Lees meer over AI */
+ .articles{
+    background-color: var(--primary-gray20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+}
+.articles img{
+    width: 100%;
+    border-radius: 1em;
+    
 }
 
-/*  */
+.articles p {
+    margin-block-start: 1em;
+    margin-block-end: 1.5em;
+}
 
+ .articles ul{
+    list-style-type: none;
+
+}
+.articles li{
+margin: 1em;
+background-color: var(--primary-gray99) ;
+padding: 2em;
+border-radius: 25% 10%;
+}
+
+.articles a {
+    background-color: var(--accent-red);
+    padding: .5em;
+} 
 
 
 
