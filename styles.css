@@ -142,7 +142,7 @@ h1{
 .design-sprint-card{
     background-color: var(--background-gray);
     border-style: solid;
-    border-radius: 1em;
+    border-radius:25% 10%;
     box-shadow: inset 10px 1em var(--accent-red);
     margin: 1em;
     padding: 1em;
@@ -243,7 +243,7 @@ h1{
 
 /* contact */
 .contact{
-    background-color: var(--primary-gray99);
+    background-color: var(--primary-gray70);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -251,11 +251,25 @@ h1{
 
 }
 .contact img{
-    width: 300px; 
+    width: 100%; 
+}
+#hartje{
+    width: 3em;
+}
+#logo-inverted{
+    width: 4em;
 }
 
 .contact h2, h3{
-    color: white;
+    color: var(--primary-gray99);
+
+}
+.contact-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   justify-content: space-evenly;
+    align-items: flex-end;
 }
 
 
@@ -281,13 +295,13 @@ h1{
 
  .articles ul{
     list-style-type: none;
-
 }
 .articles li{
 margin: 1em;
 background-color: var(--primary-gray99) ;
 padding: 2em;
 border-radius: 25% 10%;
+
 }
 
 .articles a {
