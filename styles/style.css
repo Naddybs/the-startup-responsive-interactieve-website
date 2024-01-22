@@ -45,7 +45,7 @@ h4{
 p {
     font-family: "Aktiv Grotesk3";
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.5;
     color: white;
     line-break: auto;
 }
@@ -234,7 +234,7 @@ p {
 
   }
   
-  .cases li{
+ .cases li{
     position: relative;
     overflow: hidden;
     border-radius: 10em 10em 10px 10px ;
