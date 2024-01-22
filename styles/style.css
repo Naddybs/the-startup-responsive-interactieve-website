@@ -1,8 +1,12 @@
 @import url(header.css);
-
+@import url(main.css);
 @font-face {
-    font-family: "Aktiv Grotesk";
+    font-family: "Aktiv Grotesk1";
     src: url("../assets/Font/AktivGrotesk_Rg.ttf");
+    font-family: "Aktiv Gotesk2";
+    src: url("../assets/Font/AktivGrotesk_Bd.ttf");
+    font-family: "Aktiv Grotesk3";
+    src: url("../assets/Font/AktivGrotesk_Lt.ttf");
 }
 
 
@@ -28,11 +32,22 @@ h1{
 }
 h2 {
     color: black;
+    font-family: "Aktiv Grotesk2";
+    font-size: 2em;
+    text-align: center;
+}
+h4{
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1em;
 }
 
 p {
+    font-family: "Aktiv Grotesk3";
+    font-size: 18px;
     line-height: 1.6;
     color: white;
+    line-break: auto;
 }
 /* ai design sprint section */
 
@@ -42,13 +57,24 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3em;
+    padding: 3em; 
 }
 
 .ai-design-sprint h2{
   margin-top: 0;
-  padding: 1em;
   color: var(--accent-red);
+}
+.ai-design-sprint h3{
+    color: var(--background-gray);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.design-sprint-info{
+    border: solid 5px var(--accent-red);
+    padding: 1.5em;
+    border-radius: .5em;
+    min-width: 280px;
 }
 
 .ai-design-sprint p{
@@ -56,26 +82,25 @@ p {
     margin-top: 0;
 }
 
-.ai-design-sprint button{
+.design-sprint-card{
     background-color: var(--accent-red);
-    color: #fff;
-    padding: 10px 60px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-   
+    /* border-radius:25% 10%; */
+    border: 3px solid var(--primary-gray20);
+    border-radius: .5em;
+    box-shadow:  0 5px 15px rgba(31, 22, 22, 0.565);
+    margin: 2em;
+    padding: 1em;
+    min-width: 300px;
+   min-height: 490px;
+    align-items: center;
+    color: black;
+    /* display: none; */
 }
 
-.design-sprint-card{
-    background-color: var(--background-gray);
-    border-style: solid;
-    border-radius:25% 10%;
-    box-shadow: inset 10px 1em var(--accent-red);
-    margin: 1em;
-    padding: 1em;
-    width: 350px;
-    color: black;
-}
+/* .show{
+    display: block;
+    transition: all 0.5s ease-in-out;
+} */
 .design-sprint-card p{
     color: black;
 }
@@ -83,32 +108,123 @@ p {
 /* design sprint section end */
 
 /* steps section */
-.design-sprint-steps{
-    background-color: var(--primary-gray20);
+/*  */
+
+ .design-sprint-steps{
+    background: hsla(53, 7%, 76%, 1); background: linear-gradient(90deg, hsla(53, 7%, 76%, 1) 6%, hsla(6, 27%, 63%, 1) 68%, hsla(0, 100%, 71%, 1) 100%); background: -moz-linear-gradient(90deg, hsla(53, 7%, 76%, 1) 6%, hsla(6, 27%, 63%, 1) 68%, hsla(0, 100%, 71%, 1) 100%); background: -webkit-linear-gradient(90deg, hsla(53, 7%, 76%, 1) 6%, hsla(6, 27%, 63%, 1) 68%, hsla(0, 100%, 71%, 1) 100%); filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C6C5BD", endColorstr="#BA8B86", GradientType=1 );
     color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3em;
-}
+    padding: 3em;    
+} 
 
 .design-sprint-steps p{
-    font-size: 18px;
-    margin-top: 0;
-    color: #333;
+    color: black;
 }
+.design-sprint-steps ul{
+    padding:50px 0 ;
+}
+/* dit is voor de timeline streep */
+.design-sprint-steps ul li{
+    list-style: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-color: var(--primary-gray99);
+}
+/* timeline boxes met info */
+.design-sprint-steps ul li article{
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 1rem;
+    background-color: hwb(43 54% 44% / 0.296);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1em;
+    box-shadow: inset 0 5px 15px #00000090;
+    transition: all 0.5s ease-in-out;
+}
+/* right side boxes */
+.design-sprint-steps ul li:nth-child(odd) article{
+    left: 40px;
+}
+/* left side boxes */
+.design-sprint-steps ul li:nth-child(even) article{
+    left: -475px;
+}
+/* timeline dots */
+.design-sprint-steps ul li::after{
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--accent-red);
+    box-shadow: inset 0 5px 15px #370202;
+}
+/* schermcontent tot breakpoint 600px */
+@media screen and (max-width: 600px) {
+    /* timeline line */
+    .design-sprint-steps ul li{
+        right: 11em;
+    }
+    .design-sprint-steps ul li article{
+        width: 300px;
+    }
+    .design-sprint-steps ul li:nth-child(even) article{
+        left: 2.5em;
+    }
+
+}
+/* schermcontent tussen 600px en 768px */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    .design-sprint-steps ul li{
+        right: 18em;
+    }
+    .design-sprint-steps ul li article{
+        width: 500px;
+        padding: 2rem;
+    }
+    .design-sprint-steps ul li:nth-child(even) article{
+        left: 2.5em;
+    }
+    
+}
+/* schermcontent tussen 769px en 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .design-sprint-steps ul li {
+      right: 0;
+    }
+    .design-sprint-steps ul li article {
+      width: 300px;
+    }
+    .design-sprint-steps ul li:nth-child(odd) article {
+      left: 40px;
+    }
+    .design-sprint-steps ul li:nth-child(even) article {
+      left: -375px;
+    }
+  }
+    
+
+
 /* steps section end */
 
 /* Studycases section */
    .cases {
-    background-color: var(--accent-red);
+   background-color: var(--primary-gray20);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 3em;
   }
   
-  .cards {
+  .cases ul {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -118,20 +234,18 @@ p {
 
   }
   
-  .card {
+  .cases li{
     position: relative;
     overflow: hidden;
     border-radius: 10em 10em 10px 10px ;
-    border-style: solid;
-    border-color: rgba(33, 40, 41, 0.319);
-    border-width: 1em;
-    height: 30rem;
+    border-style: solid 5px;
+    box-shadow: 0 0 1.5em rgba(29, 23, 23, 0.962);
+    min-height: 30rem;
 }
 
 .card img {
     width: 20em;
     height: 20rem;
-    aspect-ratio: 1/1;
     display: block;
     object-fit: cover;
  }
@@ -142,12 +256,11 @@ p {
     left: 0;
     right: 0;
     background-color: var(--background-gray);
-    /* clip-path: circle(110% at 50% 167%);  */
-    box-shadow: inset 5px .5em #4605056f;
+    box-shadow: inset 0 .5em var(--accent-red);
   }
 
   .card-content {
-    padding: 20px; /* Pas aan naar jouw gewenste opvulling */
+    padding: 20px;
     text-align: center;
   }
   
@@ -156,13 +269,13 @@ p {
     margin-bottom: 10px;
   }
   
-  .card-description {
+  .card p {
     font-size: 1em;
     color: #555;
   }
   
-  .card-link {
-    color: #fff; /* Aanpassen naar jouw gewenste linkkleur */
+  .card a {
+    color: var(--accent-red);
     text-decoration: underline;
   }
  
@@ -173,51 +286,52 @@ p {
     background-color: var(--primary-gray70);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2em;
-
+}
+.contact ul{
+    list-style-type: none;
+   padding: 1em;
+   justify-content: center;
 }
 .contact img{
     width: 100%; 
+    border-radius: .2em;
+}
+.socials{
+    width: 35px;
+    margin-right: 1em;
+    padding-left: 1.5em;
+    margin-top: .5em;
+}
+.contact li{
+    background-color: var(--primary-gray50);
+    border-radius: 1em;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    margin: .5em;
+    min-width: 350px;
 }
 #hartje{
-    width: 3em;
+    width: 2.7em;
+    margin-bottom: .5em;
+    padding-left: 1em;
 }
 #logo-inverted{
     width: 4em;
+    margin-left: 1em;
 }
-
 .contact h2, h3{
     color: var(--primary-gray99);
-
 }
-.images {
-    display: flex;
-    flex-direction: row;
-    align-items: left;
+.contact-info p{
+    color: hwb(0 9% 18%);
+    font-weight: 800;
 }
 
-.contact-info {
-    display: flex;
-    flex-direction: row;
-    & div {
-    display: flex;
-    flex-direction: column;
-    margin-inline: .8em;
-    }
-}
-.contact-info div h3{
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-.contact-info div p{
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
+/* contact section end */
 
 /* Lees meer over AI */
-.articles{
+/* .articles{
     background-color: var(--primary-gray20);
     display: flex;
     flex-direction: column;
@@ -266,7 +380,7 @@ p {
 
 .articles li {
     margin: .5em;
-    background-color: var(--primary-gray99);
+    background-color: var(--primary-gray70);
     padding: 2em;
     padding-bottom: .5em;
     border-radius: 25% 10%;
@@ -285,14 +399,8 @@ p {
 .articles a {
     background-color: var(--accent-red);
     padding: .5em;
-} 
+}  */
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-} 
+
 
 

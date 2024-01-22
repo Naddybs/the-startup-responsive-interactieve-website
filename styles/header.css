@@ -27,7 +27,7 @@ nav img{
 .intro{
     padding: 2em;
     margin: 0;
-    background-color: var(--primary-gray20);
+    background: hsla(186, 33%, 94%, 1); background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(120, 5%, 85%, 1) 55%, hsla(53, 7%, 76%, 1) 100%); background: -moz-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(120, 5%, 85%, 1) 55%, hsla(53, 7%, 76%, 1) 100%); background: -webkit-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(120, 5%, 85%, 1) 55%, hsla(53, 7%, 76%, 1) 100%);    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ebf4f5", endColorstr="#D8DCD8", GradientType=1 );
     max-height: fit-content;
     position: relative;
 }
@@ -42,9 +42,10 @@ nav img{
 
 .intro button {
     background-color: var(--accent-red);
-    color: #fff;
+    color: black;
     padding: 20px 60px;
-    border: none;
+    border: 3px solid var(--primary-gray99);
+    border-radius: .5em;
     cursor: pointer;
     position: relative;
     left: 0;
@@ -52,10 +53,16 @@ nav img{
    
 }
 
+.appointment-button:hover {
+    background-color: var(--primary-gray99);
+    color: var(--accent-red);
+    border: 3px solid var(--accent-red);
+  }
+
 .intro p {
     font-size: 25px;
     padding-left: 5em;
-    color: #9b9a92;
+    color: #605c5c;
 }
 
 .svg-background {
