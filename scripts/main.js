@@ -5,15 +5,3 @@ document.querySelector('.appointment-button')
         contactSection.scrollIntoView({ behavior: 'smooth' });
     });
 
-   
-
-    // let button = document.querySelector('.ai-design-sprint-card-button');
-    // let card = document.querySelector('.ai-design-sprint-card');
-    
-    // button.addEventListener('click', showCard);
-    
-    // function showCard() {
-    //   card.classList.toggle('show');
-    //   console.log('show card');
-    // }
-   
